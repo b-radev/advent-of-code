@@ -2,7 +2,7 @@ module Season2021
   module Day03
     class << self
       def input
-        File.read("#{__dir__}/input.txt").split
+        @input ||= File.read("#{__dir__}/input.txt").split
       end
     end
 

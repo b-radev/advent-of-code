@@ -2,10 +2,11 @@ module Season2021
   module Day02
     class << self
       def input
-        File.read("#{__dir__}/input.txt").split("\n").map do |line|
-          splitted = line.split
-          {direction: splitted[0], change: splitted[1].to_i}
-        end
+        @input ||=
+          File.read("#{__dir__}/input.txt").split("\n").map do |line|
+            splitted = line.split
+            {direction: splitted[0], change: splitted[1].to_i}
+          end
       end
     end
 

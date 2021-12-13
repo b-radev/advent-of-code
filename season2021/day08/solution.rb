@@ -2,7 +2,7 @@ module Season2021
   module Day08
     class << self
       def input
-        File.read("#{__dir__}/input.txt").each_line.map{_1.split("|")}
+        @input ||= File.read("#{__dir__}/input.txt").each_line.map{_1.split("|")}
       end
     end
 
