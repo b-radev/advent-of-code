@@ -131,8 +131,9 @@ module Season2021
         outputs.map{convert(segement, _1)}.join.to_i
       end
     end
+
+    Part1.new.execute
+    Part2.new.execute
   end
 end
 
-Season2021::Day08::Part1.new.execute
-Season2021::Day08::Part2.new.execute

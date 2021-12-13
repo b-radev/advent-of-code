@@ -6,7 +6,7 @@ module Season2021
 
     class << self
       def input
-        @input ||= File.read("#{__dir__}/test.txt").split("\n")
+        @input ||= File.read("#{__dir__}/input.txt").split("\n")
       end
     end
 
@@ -58,7 +58,7 @@ module Season2021
       def execute
         @score = 0
         find_incomplete_score
-        puts "Day10, Part1, Result: #{@score}"
+        puts "Day10, Part2, Result: #{@score}"
       end
 
       private
@@ -96,8 +96,9 @@ module Season2021
         @score = score.sort[score.size / 2]
       end
     end
+
+    Part1.new.execute
+    Part2.new.execute
   end
 end
 
-Season2021::Day10::Part1.new.execute
-Season2021::Day10::Part2.new.execute

@@ -85,8 +85,8 @@ module Season2021
         @octopus_map.each{|row| row.map!{_1 > 9 ? 0 : _1}}
       end
     end
+
+    Part1.new.execute
+    Part2.new.execute
   end
 end
-
-Season2021::Day11::Part1.new.execute
-Season2021::Day11::Part2.new.execute

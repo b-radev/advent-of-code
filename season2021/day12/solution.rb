@@ -2,7 +2,7 @@ module Season2021
   module Day12
     class << self
       def input
-        @input ||= input = File.read("#{__dir__}/test.txt").split
+        @input ||= input = File.read("#{__dir__}/input.txt").split
       end
 
       def parse_cave_map
@@ -56,11 +56,11 @@ module Season2021
 
       def execute
         result = Day12.path_count(@cave_map, false, [], 'start', 'end')
-        puts "Day12, Part1, Result: #{result}"
+        puts "Day12, Part2, Result: #{result}"
       end
     end
+
+    Part1.new.execute
+    Part2.new.execute
   end
 end
-
-Season2021::Day12::Part1.new.execute
-Season2021::Day12::Part2.new.execute

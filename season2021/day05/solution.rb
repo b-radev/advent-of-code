@@ -128,8 +128,9 @@ module Season2021
         end
       end
     end
+
+    Part1.new.execute
+    Part2.new.execute
   end
 end
 
-Season2021::Day05::Part1.new.execute
-Season2021::Day05::Part2.new.execute

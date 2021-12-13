@@ -137,8 +137,9 @@ module Season2021
         numbers_freequency
       end
     end
+
+    Part1.new.execute
+    Part2.new.execute
   end
 end
 
-Season2021::Day03::Part1.new.execute
-Season2021::Day03::Part2.new.execute

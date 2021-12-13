@@ -2,7 +2,7 @@ module Season2021
   module Day06
     class << self
       def input
-        @input||= File.read("#{__dir__}/test.txt").strip.split(",").map(&:to_i)
+        @input||= File.read("#{__dir__}/input.txt").strip.split(",").map(&:to_i)
       end
     end
 
@@ -17,7 +17,7 @@ module Season2021
       end
 
       def execute
-        puts "Day06, Solution for #{@days},  Result: #{calculate_fish_population_for(@days)}"
+        puts "Day06, Solution for #{@days}, Result: #{calculate_fish_population_for(@days)}"
       end
 
       private
@@ -32,8 +32,9 @@ module Season2021
         @population.sum
       end
     end
+
+    Solution.new(80).execute
+    Solution.new(256).execute
   end
 end
 
-Season2021::Day06::Solution.new(80).execute
-Season2021::Day06::Solution.new(256).execute
