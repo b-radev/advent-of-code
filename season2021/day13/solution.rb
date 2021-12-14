@@ -2,7 +2,7 @@ module Season2021
   module Day13
     class << self
       def input
-        @input ||= input = File.read("#{__dir__}/input.txt").chomp
+        @input ||= File.read("#{__dir__}/input.txt").chomp
       end
 
       def coordinates_and_instructions
