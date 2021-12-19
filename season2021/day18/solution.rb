@@ -38,17 +38,6 @@ module Season2021
         array[index] = SNum.new((array[index].num / 2), (array[index].brackets + 1))
       end
 
-      def magnitude(array)
-        loop do
-          max_brackets = array.map(&:brackets).max
-          break if max_brackets == 0
-          index = array.index{ _1.brackets == max_brackets}
-          array[index] = SNum.new((3 * array[index].num + 2 * array[index + 1].num), (array[index].brackets - 1))
-          array.delete_at(index + 1)
-        end
-        array.first.num
-      end
-
       def add(a, b)
         joined = a.dup.concat(b).map{SNum.new(_1.num, _1.brackets + 1)}
 
@@ -74,6 +63,17 @@ module Season2021
         joined
       end
 
+      def magnitude(array)
+        loop do
+          max_brackets = array.map(&:brackets).max
+          break if max_brackets == 0
+          index = array.index{ _1.brackets == max_brackets}
+          array[index] = SNum.new((3 * array[index].num + 2 * array[index + 1].num), (array[index].brackets - 1))
+          array.delete_at(index + 1)
+        end
+
+        array.first.num
+      end
     end
 
     class Solution
